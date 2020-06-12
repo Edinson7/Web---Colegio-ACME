@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/form.css">
+   <link rel="stylesheet" href="css/menu-profile.css">
+   <link rel="stylesheet" href="css/navbar.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="icon" href="images/logo-acme.png" type="image/png" sizes="16x16">
+   <title>Usuario</title>
+</head>
+
+<body>
+   <div class="page">
+      <div class="main-container">
+         <div class="main-left-column">
+            <div class="navbar">
+               <div class="title-navbar">
+                  Escritorio
+               </div>
+               <button type="button" class="btn-navbar" onclick="window.location='admin-inicio.html'">
+                  <img src="images/icon-home.png" class="icon-navbar" title="Inicio" />
+                  Inicio
+               </button>
+               <button type="button" class="btn-navbar option-selected" onclick="window.location='admin-user.html'">
+                  <img src="images/icon-people.png" class="icon-navbar" title="Registrar usuarios" />
+                  Registrar usuarios
+               </button>
+               <button type="button" class="btn-navbar" onclick="window.location='admin-subject.html'">
+                  <img src="images/icon-paper.png" class="icon-navbar" title="Registrar asignaturas" />
+                  Registrar asignaturas
+               </button>
+               <button type="button" class="btn-navbar" onclick="window.location='admin-user-list.html'">
+                  <img src="images/icon-list.png" class="icon-navbar" title="Listar usuarios" />
+                  Listar usuarios
+               </button>
+               <button type="button" class="btn-navbar" onclick="window.location='admin-subject-list.html'">
+                  <img src="images/icon-list.png" class="icon-navbar" title="Listar asignaturas" />
+                  Listar asignaturas
+               </button>
+            </div>
+         </div>
+         <div class="main-right-column">
+            <div class="header-container">
+               <button type="button" class="btn-search" onclick="window.location='#'">
+                  <img src="images/icon-search.png" class="icon-search" title="Buscar"></img>
+               </button>
+               <div class="search">
+                  <input list="searches" name="search" class="search-box" placeholder="Buscar..." />
+               </div>
+               <div class="separator">|</div>
+               <div class="header">
+                  <ul class="nav">
+                     <li class="nav-header">
+                        <a href="#">
+                           <div class="text-nav-header">
+                              Administrador&nbsp;
+                              <i class="fa fa-caret-down"></i>
+                              <img src="images/img-profile.png" class="img-profile" title="imagen de perfil" />
+                           </div>
+                        </a>
+                        <ul class="options-nav-header">
+                           <li> <a href="#" class="item-nav-header">Idioma</a>
+                              <ul class="sub-options-nav-header">
+                                 <li>
+                                    <a href="#" class="sub-item-nav-header">Español</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="sub-item-nav-header">English</a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li> <a href="index.html" class="item-nav-header">Cerrar sesion</a> </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="content-center">
+               <img src="images/logo-acme.png" class="logo" title="Logo"></img>
+               <h1>COLEGIO ACME</h1>
+               <p class="message">Complete todos los campos, para poder almacenar los datos.</p>
+               <form class="form">
+                  <div class="field">
+                     <label class="lbl-form">Nombres</label>
+                     <input class="text-box" type="text">
+                  </div>
+                  <div class="field">
+                     <label class="lbl-form">Apellidos</label>
+                     <input class="text-box" type="text">
+                  </div>
+                  <div class="field">
+                     <label class="lbl-form">Identificacion</label>
+                     <input class="text-box" type="text">
+                  </div>
+                  <div class="select-container">
+                     <label class="lbl-form">Tipo de usuario</label>
+                     <select class="slc">
+                        <option>Estudiante</option>
+                        <option>Profesor</option>
+                     </select>
+                  </div>
+				  <div class="select-container">
+                     <label class="lbl-form">Agregar asignatura</label>
+                     <select class="slc">
+                     </select>
+                  </div>
+                  <div class="field">
+                     <label class="lbl-form">Usuario</label>
+                     <input class="text-box" type="text">
+                  </div>
+                  <div class="field">
+                     <label class="lbl-form">Correo electronico</label>
+                     <input class="text-box" type="text">
+                  </div>
+                  <div class="field">
+                     <label class="lbl-form">Contraseña</label>
+                     <input class="text-box" type="password">
+                  </div>
+                  <div class="field">
+                     <label class="lbl-form">Confirmar contraseña</label>
+                     <input class="text-box" type="password">
+                  </div>
+                  <div class="load-container">
+                     <label class="lbl-form">Registro fotografico</label>
+                     <button type="button" class="btn-load" onclick="window.location='#'">Subir</button>
+                  </div>
+               </form>
+               <div class="button-container">
+                  <button type="button" class="button" onclick="window.location='#'">Aceptar</button>
+                  <!--button type="button" class="button" onclick="window.location='#'">Cancelar</button-->
+               </div>
+            </div>
+            <div class="footer">
+               <div>Terminos y condiciones</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

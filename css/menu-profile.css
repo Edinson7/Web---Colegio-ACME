@@ -1,0 +1,108 @@
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 0 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-search {
+  border: none;
+  background-color: white;
+  width: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-search {
+  width: 15px;
+  height: 15px;
+  margin: 0px 10px;
+}
+
+.search-box {
+  width: 100%;
+  height: 60%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  display: flex;
+  border: none;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center; /*horizontal*/
+  align-items: center; /*vertical*/
+  flex-direction: column;
+  background-color: white;
+}
+
+.separator {
+  width: 8px;
+  background-color: white;
+  font-size: 35px;
+  color: rgb(130, 130, 130);
+  text-align: center;
+}
+
+.header {
+  width: 175px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.text-nav-header {
+  display: flex;
+  justify-content: center;
+}
+
+.img-profile {
+  margin-left: 8px;
+  width: 25px;
+  height: 25px;
+}
+
+.fa {
+  margin-left: 5px;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.nav li a {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  border: 1px solid white;
+}
+
+.nav li a:hover {
+  background-color: rgb(130, 130, 130);
+}
+
+.nav > li {
+  flex:left;
+}
+
+.nav li ul {
+  display: none;
+  position:absolute;
+  min-width: 175px;
+  border: 1px solid rgb(130, 130, 130);
+}
+
+.nav li:hover > ul {
+  display:block;
+}
+
+.nav li ul li {
+  position:relative;
+}
+
+.nav li ul li ul {
+  left: -87px;
+  top: -1px;
+  min-width: 85px;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/list.css">
+   <link rel="stylesheet" href="css/menu-profile.css">
+   <link rel="stylesheet" href="css/navbar.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="icon" href="images/logo-acme.png" type="image/png" sizes="16x16">
+   <title>Lista de usuarios</title>
+</head>
+
+<body>
+   <div class="page">
+      <div class="main-container">
+         <div class="main-left-column">
+            <div class="navbar">
+               <div class="title-navbar">
+                  Escritorio
+               </div>
+               <button type="button" class="btn-navbar" onclick="window.location='admin-inicio.html'">
+                  <img src="images/icon-home.png" class="icon-navbar" title="Inicio" />
+                  Inicio
+               </button>
+               <button type="button" class="btn-navbar" onclick="window.location='admin-user.html'">
+                  <img src="images/icon-people.png" class="icon-navbar" title="Registrar usuarios" />
+                  Registrar usuarios
+               </button>
+               <button type="button" class="btn-navbar" onclick="window.location='admin-subject.html'">
+                  <img src="images/icon-paper.png" class="icon-navbar" title="Registrar asignaturas" />
+                  Registrar asignaturas
+               </button>
+               <button type="button" class="btn-navbar option-selected" onclick="window.location='admin-user-list.html'">
+                  <img src="images/icon-list.png" class="icon-navbar" title="Listar usuarios" />
+                  Listar usuarios
+               </button>
+               <button type="button" class="btn-navbar" onclick="window.location='admin-subject-list.html'">
+                  <img src="images/icon-list.png" class="icon-navbar" title="Listar asignaturas" />
+                  Listar asignaturas
+               </button>
+            </div>
+         </div>
+         <div class="main-right-column">
+            <div class="header-container">
+               <button type="button" class="btn-search" onclick="window.location='#'">
+                  <img src="images/icon-search.png" class="icon-search" title="Buscar"></img>
+               </button>
+               <div class="search">
+                  <input list="searches" name="search" class="search-box" placeholder="Buscar..." />
+               </div>
+               <div class="separator">|</div>
+               <div class="header">
+                  <ul class="nav">
+                     <li class="nav-header">
+                        <a href="#">
+                           <div class="text-nav-header">
+                              Administrador&nbsp;
+                              <i class="fa fa-caret-down"></i>
+                              <img src="images/img-profile.png" class="img-profile" title="imagen de perfil" />
+                           </div>
+                        </a>
+                        <ul class="options-nav-header">
+                           <li> <a href="#" class="item-nav-header">Idioma</a>
+                              <ul class="sub-options-nav-header">
+                                 <li>
+                                    <a href="#" class="sub-item-nav-header">Español</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="sub-item-nav-header">English</a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li> <a href="index.html" class="item-nav-header">Cerrar sesion</a> </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="content">
+               <div class="first-container">
+                  <img src="images/logo-acme.png" class="logo" title="Logo"></img>
+                  <h1>COLEGIO ACME</h1>
+               </div>
+               <div class="second-container">
+                  <h2>Usuarios</h2>
+               </div>
+               <div class="third-container">
+                  <div class="four-container">
+                     <div class="checkbox-container">
+                        <input class="checkbox" type="checkbox">
+                        <label class="lbl-checkbox">Profesores</label>
+                     </div>
+                     <div class="checkbox-container">
+                        <input class="checkbox" type="checkbox">
+                        <label class="lbl-checkbox">Estudiantes</label>
+                     </div>
+                  </div>
+                  <div class="search-container">
+                     <button type="button" class="btn-search" onclick="window.location='#'">
+                        <img src="images/icon-search.png" class="icon-search" title="Buscar"></img>
+                     </button>
+                     <div class="search">
+                        <input list="searches" name="search" class="search-box" placeholder="Buscar por nombre..." />
+                     </div>
+                  </div>
+               </div>
+               <div class="second-container">
+                  Cantidad de usuarios listados: 4
+               </div>
+               <div class="list-container">
+                  <div class="item-container">
+                     <div class="data-container">
+                        <div class="image-container">
+                           <img src="images/img-profile.png" title="Imagen de perfil">
+                        </div>
+                        <div class="info-container">
+                           <div class="name">David James</div>
+                           <div class="email">Correo: dj@gmail.com</div>
+                           <div class="id">Identificacion: 1061457896</div>
+                        </div>
+                        <div class="options">
+                           <button type="button" class="btn-edit" onclick="window.location='admin-user.html'">
+                              <img src="images/icon-edit.png" title="Editar datos de usuario">
+                           </button>
+                           <button type="button" class="btn-delete" onclick="window.location='#'">
+                              <img src="images/icon-delete.png" title="Eliminar usuario">
+                           </button>
+                        </div>
+                     </div>
+                     <div class="item-padding"></div>
+                  </div>
+                  <div class="item-container">
+                     <div class="data-container">
+                        <div class="image-container">
+                           <img src="images/img-profile.png" title="Imagen de perfil">
+                        </div>
+                        <div class="info-container">
+                           <div class="name">David James</div>
+                           <div class="email">Correo: dj@gmail.com</div>
+                           <div class="id">Identificacion: 1061457896</div>
+                        </div>
+                        <div class="options">
+                           <button type="button" class="btn-edit" onclick="window.location='admin-user.html'">
+                              <img src="images/icon-edit.png" title="Editar datos de usuario">
+                           </button>
+                           <button type="button" class="btn-delete" onclick="window.location='#'">
+                              <img src="images/icon-delete.png" title="Eliminar usuario">
+                           </button>
+                        </div>
+                     </div>
+                     <div class="item-padding"></div>
+                  </div>
+                  <div class="item-container">
+                     <div class="data-container">
+                        <div class="image-container">
+                           <img src="images/img-profile.png" title="Imagen de perfil">
+                        </div>
+                        <div class="info-container">
+                           <div class="name">David James</div>
+                           <div class="email">Correo: dj@gmail.com</div>
+                           <div class="id">Identificacion: 1061457896</div>
+                        </div>
+                        <div class="options">
+                           <button type="button" class="btn-edit" onclick="window.location='admin-user.html'">
+                              <img src="images/icon-edit.png" title="Editar datos de usuario">
+                           </button>
+                           <button type="button" class="btn-delete" onclick="window.location='#'">
+                              <img src="images/icon-delete.png" title="Eliminar usuario">
+                           </button>
+                        </div>
+                     </div>
+                     <div class="item-padding"></div>
+                  </div>
+                  <div class="item-container">
+                     <div class="data-container">
+                        <div class="image-container">
+                           <img src="images/img-profile.png" title="Imagen de perfil">
+                        </div>
+                        <div class="info-container">
+                           <div class="name">David James</div>
+                           <div class="email">Correo: dj@gmail.com</div>
+                           <div class="id">Identificacion: 1061457896</div>
+                        </div>
+                        <div class="options">
+                           <button type="button" class="btn-edit" onclick="window.location='admin-user.html'">
+                              <img src="images/icon-edit.png" title="Editar datos de usuario">
+                           </button>
+                           <button type="button" class="btn-delete" onclick="window.location='#'">
+                              <img src="images/icon-delete.png" title="Eliminar usuario">
+                           </button>
+                        </div>
+                     </div>
+                     <div class="item-padding"></div>
+                  </div>
+               </div>
+               <div class="pagination-container">
+                  <div class="paginacion">
+                     <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#" class="enable">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">&raquo;</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+.content .first-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.content .first-container h1 {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.content .second-container {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 5px;
+}
+
+.content .third-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.order-container {
+  margin-bottom: 5px;
+}
+
+.order-container .slc-order {
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.search-container {
+  display: flex;
+}
+
+.content .list-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.item-container {
+  margin: 10px;
+  width: 100%;
+  background-color: white;
+  padding: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 0 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.item-container .data-container {
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.item-container .data-container .image-container {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-container .data-container .image-container img {
+  width: 60px;
+  height: auto;
+}
+
+.item-container .data-container .info-container {
+  width: 170px;
+  height: 100%;
+  margin: 7px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-container {
+  color: black;
+  text-decoration: none;
+}
+
+.item-container .data-container .options {
+  width: 45px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.item-container .data-container .options .btn-edit, .item-container .data-container .options .btn-delete {
+  border: none;
+  background-color: white;
+}
+
+.item-container .data-container .options .btn-edit img, .item-container .data-container .options .btn-delete img {
+  width: 15px;
+  height: auto;
+}
+
+.content .item-padding {
+  margin-top: 10px;
+  border-top: 0.3px solid grey;
+  padding-bottom: 10px;
+}
+
+.content .pagination-container .pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content .pagination-container .pagination a {
+  color: grey;
+  float: left;
+  background-color: white;
+  padding: 3px 11px;
+  margin: 5px;
+  border-radius: 3px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 0 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content .pagination-container .pagination .enable {
+  color: black;
+}
+
+.content .pagination-container .pagination .enable:active {
+  box-shadow: none;
+}
