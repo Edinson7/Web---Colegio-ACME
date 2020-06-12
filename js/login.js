@@ -24,3 +24,18 @@ btnLogin.addEventListener('click', function() {
     }
   }
 });
+
+
+
+
+function setSuccessFor(input) {
+   const formControl = input.parentElement;
+   formControl.className = 'field success';
+}
+
+function setErrorFor(input, message) {
+   const formControl = input.parentElement;
+   const small = formControl.querySelector('small');
+   formControl.className = 'field error';
+   small.innerText = message;
+}
