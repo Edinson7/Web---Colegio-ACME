@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/form.css">
-    <link rel="icon" href="images/logo-acme.png" type="image/png" sizes="16x16">
-    <title>Inicio de sesion</title>
-  </head>
-  <body>
-    <div class="page">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/form.css">
+   <link rel="icon" href="images/logo-acme.png" type="image/png" sizes="16x16">
+   <title>Inicio de sesion</title>
+</head>
+
+<body>
+   <div class="page">
       <div class="content-container">
-        <div class="content-left-column">
-          <img src="images/img-login.png" class="img-login" title="Imagen-login"></img>
-        </div>
-        <div class="content-right-column">
-          <div class="language-container">
-            <select class="slc-language">
-              <option>Español</option>
-              <option>English</option>
-            </select>
-          </div>
-          <div class="form-container">
-            <a href="index.html">
-              <img src="images/logo-acme.png" class="logo" title="Logo"></img>
-            </a>
-            <h1>COLEGIO ACME</h1>
-            <p class="message">¡Bienvenido! Por favor, ingrese su cuenta.</p>
-            <form class="form" id="form">
-              <div class="field">
-                <label class="lbl-form">Usuario</label>
-                <input class="text-box" type="text" id="txtUser"></input>
-                <small>Error message</small>
-              </div>
-              <div class="field">
-                <label class="lbl-form">Contraseña</label>
-                <input class="text-box" type="password" id="txtPass"></input>
-                <small>Error message</small>
-              </div>
-            </form>
-            <div class="options-container">
-              <div class="pass-remember">
-                <input class="checkbox" type="checkbox">
-                <label class="lbl-checkbox"> Recordar contraseña</label>
-              </div>
-              <a href="#" class="link-pass-recover">Recuperar contraseña</a>
+         <div class="content-left-column">
+            <img src="images/img-login.png" class="img-login" title="Imagen-login"></img>
+         </div>
+         <div class="content-right-column">
+            <div class="language-container">
+               <select class="slc-language">
+                  <option>Español</option>
+                  <option>English</option>
+               </select>
             </div>
-            <div class="button-container">
-              <button type="button" class="button" id="btnLogin">Iniciar sesion</button>
-              <!--button type="button" class="button" onclick="window.location='admin-inicio.html'">Administrador</button>
+            <div class="form-container">
+               <a href="index.html">
+                  <img src="images/logo-acme.png" class="logo" title="Logo"></img>
+               </a>
+               <h1>COLEGIO ACME</h1>
+               <p class="message">¡Bienvenido! Por favor, ingrese su cuenta.</p>
+               <form class="form" id="form">
+                  <div class="field">
+                     <label class="lbl-form">Usuario</label>
+                     <input class="text-box" type="text" id="txtUser"></input>
+                     <small>Error message</small>
+                  </div>
+                  <div class="field">
+                     <label class="lbl-form">Contraseña</label>
+                     <input class="text-box" type="password" id="txtPass"></input>
+                     <small>Error message</small>
+                  </div>
+               </form>
+               <div class="options-container">
+                  <div class="pass-remember">
+                     <input class="checkbox" type="checkbox">
+                     <label class="lbl-checkbox"> Recordar contraseña</label>
+                  </div>
+                  <a href="#" class="link-pass-recover">Recuperar contraseña</a>
+               </div>
+               <div class="field-mensaje" id="field-error">
+                  Error message
+               </div>
+               <div class="button-container">
+                  <button type="button" class="button" id="btnLogin">Iniciar sesion</button>
+
+                  <!--button type="button" class="button" onclick="window.location='admin-inicio.html'">Administrador</button>
               <button type="button" class="button" onclick="window.location='profesor-inicio.html'">Profesor</button>
               <button type="button" class="button" onclick="window.location='estudiante-inicio.html'">Estudiante</button-->
+               </div>
             </div>
-          </div>
-          <div class="footer">
-            <div>Terminos y condiciones</div>
-          </div>
-        </div>
+            <div class="footer">
+               <div>Terminos y condiciones</div>
+            </div>
+         </div>
       </div>
-    </div>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
-  </body>
+   </div>
+   <script type="text/javascript" src="js/main.js"></script>
+   <script type="text/javascript" src="js/login.js"></script>
+</body>
+
 </html>
