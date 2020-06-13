@@ -46,6 +46,7 @@ btnLogin.addEventListener('click', function() {
          }
       }
    }
+<<<<<<< HEAD
 
 
 });
@@ -62,3 +63,6 @@ function setErrorFor(input, message) {
    formControl.className = 'field error';
    small.innerText = message;
 }
+=======
+});
+>>>>>>> 58dd5ce26d25e4cd83bfdff8fed7ce015b02a602
