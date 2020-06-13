@@ -26,7 +26,11 @@ function crearAsignatura (pNombre, pCodigo, pGrado) {
     codigo: pCodigo,
     grado: pGrado,
     profesor: null,
-    estudiantes: []
+    estudiantes: [],
+    faltas: 0,
+    nota1: "",
+    nota2: "",
+    nota3: ""
   }
   return asignatura;
 }
