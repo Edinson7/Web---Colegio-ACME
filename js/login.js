@@ -46,23 +46,5 @@ btnLogin.addEventListener('click', function() {
          }
       }
    }
-<<<<<<< HEAD
-
-
 });
 
-
-function setSuccessFor(input) {
-   const formControl = input.parentElement;
-   formControl.className = 'field success';
-}
-
-function setErrorFor(input, message) {
-   const formControl = input.parentElement;
-   const small = formControl.querySelector('small');
-   formControl.className = 'field error';
-   small.innerText = message;
-}
-=======
-});
->>>>>>> 58dd5ce26d25e4cd83bfdff8fed7ce015b02a602
