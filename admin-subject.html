@@ -83,14 +83,16 @@
                <img src="images/logo-acme.png" class="logo" title="Logo"></img>
                <h1>COLEGIO ACME</h1>
                <p class="message">Complete todos los campos, para poder almacenar los datos.</p>
-               <form class="form">
+               <form id="form" class="form">
                   <div class="field">
                      <label class="lbl-form">Nombre de asignatura</label>
                      <input class="text-box" type="text" id="txtName">
+                     <small>Error message</small>
                   </div>
                   <div class="field">
                      <label class="lbl-form">Codigo</label>
                      <input class="text-box" type="text" id="txtCodigo">
+                     <small>Error message</small>
                   </div>
                   <div class="select-container">
                      <label class="lbl-form">Grado</label>
@@ -108,11 +110,11 @@
                         <option>Once</option>
                      </select>
                   </div>
+                  <div class="button-container">
+                     <button type="submit" class="button" id="btnRegistrarAsignatura">Aceptar</button>
+                     <!--button type="button" class="button" onclick="window.location='#'">Cancelar</button-->
+                  </div>
                </form>
-               <div class="button-container">
-                  <button type="button" class="button" id="btnRegistrarAsignatura">Aceptar</button>
-                  <!--button type="button" class="button" onclick="window.location='#'">Cancelar</button-->
-               </div>
             </div>
             <div class="footer">
                <div>Terminos y condiciones</div>

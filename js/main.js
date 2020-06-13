@@ -15,3 +15,20 @@ function crearCuenta (pUser, pPassword, pTipo) {
   }
   return cuenta;
 }
+
+function setSuccessFor(input) {
+  const formControl = input.parentElement;
+  formControl.className = 'field success';
+}
+
+function setErrorFor(input, message) {
+  const formControl = input.parentElement;
+  const small = formControl.querySelector('small');
+  formControl.className = 'field error';
+  small.innerText = message;
+}
+
+function setGreenSuccessFor(input) {
+  const formControl = input.parentElement;
+  formControl.className = 'field green';
+}

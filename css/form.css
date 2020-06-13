@@ -110,6 +110,11 @@
 .field.error small {
 	visibility: visible;
 }
+
 .field.error input {
 	border-color: #e74c3c;
+}
+
+.field.green input {
+	border-color: green;
 }
