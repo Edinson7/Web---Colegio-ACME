@@ -9,10 +9,10 @@ function asignarVista(pTipo) {
       case "administrador":
          location.href = "admin-inicio.html";
          break;
-      case "profesor":
+      case "Profesor":
          location.href = "profesor-inicio.html";
          break;
-      case "estudiante":
+      case "Estudiante":
          location.href = "estudiante-inicio.html";
          break;
    }
@@ -23,6 +23,7 @@ btnLogin.addEventListener('click', function() {
    const passwordValue = txtPass.value.trim();
    let userAcceso = false;
    let passAcceso = false;
+   let bandera = false;
 
    if (usuarioValue === '') {
       setErrorFor(txtUser, 'No se puede dejar el usuario en blanco.');
@@ -39,12 +40,15 @@ btnLogin.addEventListener('click', function() {
    if (userAcceso == true && passAcceso === true) {
       for (let i = 0; i < cuentas.length; i++) {
          if (cuentas[i].user === usuarioValue && cuentas[i].password === passwordValue) {
+            console.log(cuentas[i].user);
             asignarVista(cuentas[i].tipo);
-         } else {
-            errorMensaje.style.display = 'block';
-            errorMensaje.innerHTML = 'Usuario o contraseña incorrecta'
+            bandera = true;
          }
       }
+      if (!bandera) {
+         errorMensaje.style.display = 'block';
+         errorMensaje.innerHTML = 'Usuario o contraseña incorrecta';
+      }
+
    }
 });
-
