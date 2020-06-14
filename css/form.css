@@ -67,42 +67,53 @@
 }
 
 .select-container {
-   margin: 50px 0px 40px 0px;
+   /*margin: 50px 0px 40px 0px;*/
+   margin-bottom: 30px;
    display: flex;
+   flex-wrap: wrap;
    width: 100%;
    align-items: center;
    justify-content: left;
 }
 
 .slc {
-   border-radius: 5px;
-   padding: 8px;
-   border-color: rgb(130, 130, 130);
-   background-color: rgb(218, 218, 218);
-   font-family: 'Source Sans Pro', sans-serif;
-   font-size: 15px;
-   color: black;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 8px;
+  border-color: rgb(130, 130, 130);
+  background-color: rgb(218, 218, 218);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  color: black;
 }
 
 .load-container {
-   display: flex;
-   align-items: center;
-   justify-content: left;
-   margin-bottom: 30px;
+  width: 65%;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: left;
+  /*margin-bottom: 30px;*/
 }
 
 .btn-load {
-   font-family: 'Source Sans Pro', sans-serif;
-   font-size: 15px;
-   background-color: rgb(130, 130, 130);
-   border: 1px solid rgb(130, 130, 130);
-   width: 90px;
-   height: 40px;
-   border-radius: 5px;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  background-color: rgb(130, 130, 130);
+  border: 1px solid rgb(130, 130, 130);
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-.field small {
+.msgLoad-first-container {
+  width: 65%;
+  margin-bottom: 30px;
+}
+
+.field small, .select-container small, .msgLoad-second-container small {
    color: #e74c3c;
    bottom: 0;
    left: 0;
@@ -124,4 +135,10 @@
 
 .field.green input {
 	border-color: green;
+}
+
+.img-photo {
+  margin-top: 5px;
+  width: 40px;
+  height: auto;
 }

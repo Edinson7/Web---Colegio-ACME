@@ -5,32 +5,13 @@ const grado = document.getElementById('slcGrado');
 const btnRegistrarAsignatura = document.getElementById('btnRegistrarAsignatura');
 var bandera = false;
 
-function LimpiarCampos () {
-  name.value = "";
-  setSuccessFor(name);
-  codigo.value = "";
-  setSuccessFor(codigo);
-  //grado.selectedIndex = 0;
-  bandera = false;
-}
-
-function agregarAsignatura (array, asignatura) {
-  array.push(asignatura);
-  localStorage.setItem('asignaturas', JSON.stringify(array));
-  return array;
-}
-
 function crearAsignatura (pNombre, pCodigo, pGrado) {
   let asignatura = {
     nombre: pNombre,
     codigo: pCodigo,
     grado: pGrado,
     profesor: null,
-    estudiantes: [],
-    faltas: 0,
-    nota1: "",
-    nota2: "",
-    nota3: ""
+    estudiantes: []
   }
   return asignatura;
 }
@@ -40,13 +21,13 @@ function RegistrarAsignatura() {
   let txtCodigo = codigo.value.trim();
   let slcGrado = grado.value.trim();
 
-  let nuevaAsignatura = crearAsignatura (txtName, txtCodigo, slcGrado)
+  let nuevaAsignatura = crearAsignatura (txtName, txtCodigo, slcGrado);
 
-  asignaturas = agregarAsignatura(asignaturas, nuevaAsignatura);
+  asignaturas = addToArrayToLocalStorage(asignaturas, nuevaAsignatura, 'asignaturas');
 
   alert("¡Tu asignatura ha sido registrada con exito!\nNombre: " + txtName + "     Codigo: " + txtCodigo + "     Grado: " + slcGrado);
 
-  LimpiarCampos();
+  location.reload();
 }
 
 btnRegistrarAsignatura.addEventListener('click', e => {

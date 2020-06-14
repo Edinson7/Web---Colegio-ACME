@@ -1,17 +1,18 @@
-var cuentas = localStorage.getItem('cuentas') ? JSON.parse(localStorage.getItem('cuentas')) : agregarCuenta([], crearCuenta("admin", "123", "administrador"));
+var cuentas = localStorage.getItem('cuentas') ? JSON.parse(localStorage.getItem('cuentas')) : addToArrayToLocalStorage([], crearCuenta("admin", "123", "administrador", "0"), 'cuentas');
 var asignaturas = localStorage.getItem('asignaturas') ? JSON.parse(localStorage.getItem('asignaturas')) : [];
 
-function agregarCuenta (array, cuenta) {
-  array.push(cuenta);
-  localStorage.setItem('cuentas', JSON.stringify(array));
+function addToArrayToLocalStorage (array, item, keyName) {
+  array.push(item);
+  localStorage.setItem(keyName, JSON.stringify(array));
   return array;
 }
 
-function crearCuenta (pUser, pPassword, pTipo) {
+function crearCuenta (pUser, pPassword, pTipo, pId) {
   let cuenta = {
     user: pUser,
     password: pPassword,
-    tipo: pTipo
+    tipo: pTipo,
+    id: pId
   }
   return cuenta;
 }
