@@ -1,12 +1,12 @@
 .form-container {
-   font-family: 'Source Sans Pro', sans-serif;
-   height: 802px;
-   display: flex;
-   justify-content: center;
-   /*horizontal*/
-   align-items: center;
-   /*vertical*/
-   flex-direction: column;
+  margin: 50px 0px;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  justify-content: center;
+  /*horizontal*/
+  align-items: center;
+  /*vertical*/
+  flex-direction: column;
 }
 
 .form {
@@ -96,6 +96,37 @@
   /*margin-bottom: 30px;*/
 }
 
+.student-assignment-container {
+  width: 65%;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.primer-contenedor {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.segundo-contenedor {
+  border: 1px solid rgb(130, 130, 130);
+}
+
+.slcStudents {
+  margin-right: 15px;
+}
+
+.btnOpcEst {
+  margin-top: 5px;
+  font-size: 15px;
+  background-color: rgb(130, 130, 130);
+  border: 1px solid rgb(130, 130, 130);
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
 .btn-load {
   margin-top: 5px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -111,6 +142,11 @@
 .msgLoad-first-container {
   width: 65%;
   margin-bottom: 30px;
+}
+
+.msgAsignar {
+  width: 65%;
+  color: red;
 }
 
 .field small, .select-container small, .msgLoad-second-container small {

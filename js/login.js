@@ -38,10 +38,9 @@ btnLogin.addEventListener('click', function() {
       passAcceso = true;
    }
    if (userAcceso == true && passAcceso === true) {
-      for (let i = 0; i < cuentas.length; i++) {
-         if (cuentas[i].user === usuarioValue && cuentas[i].password === passwordValue) {
-            console.log(cuentas[i].user);
-            asignarVista(cuentas[i].tipo);
+      for (let i = 0; i < usuarios.length; i++) {
+         if (usuarios[i].user === usuarioValue && usuarios[i].password === passwordValue) {
+            asignarVista(usuarios[i].tipo);
             bandera = true;
          }
       }
@@ -49,6 +48,5 @@ btnLogin.addEventListener('click', function() {
          errorMensaje.style.display = 'block';
          errorMensaje.innerHTML = 'Usuario o contraseña incorrecta';
       }
-
    }
 });

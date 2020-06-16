@@ -2,15 +2,16 @@
 <html lang="en" dir="ltr">
 
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/form.css">
-   <link rel="stylesheet" href="css/menu-profile.css">
-   <link rel="stylesheet" href="css/navbar.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="icon" href="images/logo-acme.png" type="image/png" sizes="16x16">
-   <title>Asignatura</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/menu-profile.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/profesor-tabla.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="images/logo-acme.png" type="image/png" sizes="16x16">
+  <title>Asignatura</title>
 </head>
 
 <body>
@@ -40,6 +41,10 @@
                <button type="button" class="btn-navbar" onclick="window.location='admin-subject-list.html'">
                   <img src="images/icon-list.png" class="icon-navbar" title="Listar asignaturas" />
                   Listar asignaturas
+               </button>
+               <button type="button" class="btn-navbar" onclick="window.location='admin-subject-user.html'">
+                  <img src="images/icon-add.png" class="icon-navbar" title="Asignar asignaturas" />
+                  Asignar asignaturas
                </button>
             </div>
          </div>
@@ -110,11 +115,11 @@
                         <option>Once</option>
                      </select>
                   </div>
-                  <div class="button-container">
-                     <button type="submit" class="button" id="btnRegistrarAsignatura">Aceptar</button>
-                     <!--button type="button" class="button" onclick="window.location='#'">Cancelar</button-->
-                  </div>
                </form>
+               <div class="button-container">
+                  <button type="submit" class="button" id="btnRegistrarAsignatura">Aceptar</button>
+                  <!--button type="button" class="button" onclick="window.location='#'">Cancelar</button-->
+               </div>
             </div>
             <div class="footer">
                <div>Terminos y condiciones</div>

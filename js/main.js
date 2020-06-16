@@ -1,5 +1,6 @@
-var cuentas = localStorage.getItem('cuentas') ? JSON.parse(localStorage.getItem('cuentas')) : addToArrayToLocalStorage([], crearCuenta("admin", "123", "administrador", "0"), 'cuentas');
+var usuarios = localStorage.getItem('usuarios') ? JSON.parse(localStorage.getItem('usuarios')) : addToArrayToLocalStorage([], { user: 'admin', password: '123', tipo: 'administrador' }, 'usuarios');
 var asignaturas = localStorage.getItem('asignaturas') ? JSON.parse(localStorage.getItem('asignaturas')) : [];
+var estudianteAsignatura = localStorage.getItem('estudianteAsignatura') ? JSON.parse(localStorage.getItem('estudianteAsignatura')) : [];
 
 function addToArrayToLocalStorage (array, item, keyName) {
   array.push(item);
@@ -7,14 +8,12 @@ function addToArrayToLocalStorage (array, item, keyName) {
   return array;
 }
 
-function crearCuenta (pUser, pPassword, pTipo, pId) {
-  let cuenta = {
-    user: pUser,
-    password: pPassword,
-    tipo: pTipo,
-    id: pId
-  }
-  return cuenta;
+function crearElemDoc (tipo, className, text, padre) {
+  newElem = document.createElement(tipo);
+  newElem.className = className;
+  newElem.textContent = text;
+  padre.appendChild(newElem);
+  return newElem;
 }
 
 function setSuccessFor(input) {

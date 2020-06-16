@@ -39,6 +39,10 @@
               <img src="images/icon-list.png" class="icon-navbar" title="Listar asignaturas"/>
               Listar asignaturas
             </button>
+            <button type="button" class="btn-navbar" onclick="window.location='admin-subject-user.html'">
+               <img src="images/icon-add.png" class="icon-navbar" title="Asignar asignaturas" />
+               Asignar asignaturas
+            </button>
           </div>
         </div>
         <div class="main-right-column">
@@ -102,94 +106,10 @@
                 </div>
               </div>
             </div>
-            <div class="second-container">
+            <div class="second-container" id="second-container">
               Cantidad de asignaturas listadas: 4
             </div>
-            <div class="list-container">
-              <div class="item-container">
-                <div class="data-container">
-                  <div class="image-container">
-                    <img src="images/img-subject.png" title="Imagen de asignatura">
-                  </div>
-                  <div class="info-container">
-                    <div class="name">Matematicas</div>
-                    <div class="email">Codigo: 120</div>
-                    <div class="id">Grado: Primero</div>
-                  </div>
-                  <div class="options">
-                    <button type="button" class="btn-edit" onclick="window.location='admin-subject.html'">
-                      <img src="images/icon-edit.png" title="Editar datos de asignatura">
-                    </button>
-                    <button type="button" class="btn-delete" onclick="window.location='#'">
-                      <img src="images/icon-delete.png" title="Eliminar asignatura">
-                    </button>
-                  </div>
-                </div>
-                <div class="item-padding"></div>
-              </div>
-              <div class="item-container">
-                <div class="data-container">
-                  <div class="image-container">
-                    <img src="images/img-subject.png" title="Imagen de asignatura">
-                  </div>
-                  <div class="info-container">
-                    <div class="name">Matematicas</div>
-                    <div class="email">Codigo: 120</div>
-                    <div class="id">Grado: Primero</div>
-                  </div>
-                  <div class="options">
-                    <button type="button" class="btn-edit" onclick="window.location='admin-subject.html'">
-                      <img src="images/icon-edit.png" title="Editar datos de asignatura">
-                    </button>
-                    <button type="button" class="btn-delete" onclick="window.location='#'">
-                      <img src="images/icon-delete.png" title="Eliminar asignatura">
-                    </button>
-                  </div>
-                </div>
-                <div class="item-padding"></div>
-              </div>
-              <div class="item-container">
-                <div class="data-container">
-                  <div class="image-container">
-                    <img src="images/img-subject.png" title="Imagen de asignatura">
-                  </div>
-                  <div class="info-container">
-                    <div class="name">Matematicas</div>
-                    <div class="email">Codigo: 120</div>
-                    <div class="id">Grado: Primero</div>
-                  </div>
-                  <div class="options">
-                    <button type="button" class="btn-edit" onclick="window.location='admin-subject.html'">
-                      <img src="images/icon-edit.png" title="Editar datos de asignatura">
-                    </button>
-                    <button type="button" class="btn-delete" onclick="window.location='#'">
-                      <img src="images/icon-delete.png" title="Eliminar asignatura">
-                    </button>
-                  </div>
-                </div>
-                <div class="item-padding"></div>
-              </div>
-              <div class="item-container">
-                <div class="data-container">
-                  <div class="image-container">
-                    <img src="images/img-subject.png" title="Imagen de asignatura">
-                  </div>
-                  <div class="info-container">
-                    <div class="name">Matematicas</div>
-                    <div class="email">Codigo: 120</div>
-                    <div class="id">Grado: Primero</div>
-                  </div>
-                  <div class="options">
-                    <button type="button" class="btn-edit" onclick="window.location='admin-subject.html'">
-                      <img src="images/icon-edit.png" title="Editar datos de asignatura">
-                    </button>
-                    <button type="button" class="btn-delete" onclick="window.location='#'">
-                      <img src="images/icon-delete.png" title="Eliminar asignatura">
-                    </button>
-                  </div>
-                </div>
-                <div class="item-padding"></div>
-              </div>
+            <div class="list-container" id="list-container">
             </div>
             <div class="pagination-container">
               <div class="paginacion">
@@ -206,5 +126,7 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/admin-subject-list.js"></script>
   </body>
 </html>
