@@ -29,7 +29,7 @@
                   <img src="images/icon-people.png" class="icon-navbar" title="Registrar usuarios" />
                   Registrar usuarios
                </button>
-               <button type="button" class="btn-navbar option-selected" onclick="window.location='admin-subject.html'">
+               <button type="button" class="btn-navbar" onclick="window.location='admin-subject.html'">
                   <img src="images/icon-paper.png" class="icon-navbar" title="Registrar asignaturas" />
                   Registrar asignaturas
                </button>
@@ -86,7 +86,7 @@
             <div class="form-container">
                <img src="images/logo-acme.png" class="logo" title="Logo"></img>
                <h1>COLEGIO ACME</h1>
-               <p class="message">Complete todos los campos, para poder almacenar los datos.</p>
+               <p class="message">Complete todos los campos, para editar los datos.</p>
                <form id="form" class="form">
                   <div class="field">
                      <label class="lbl-form">Nombre de asignatura</label>
@@ -116,9 +116,8 @@
                   </div>
                </form>
                <div class="button-container">
-                  <button type="submit" class="button" id="btnRegistrarAsignatura">Aceptar</button>
-                  <!--button type="button" class="button" onclick="window.location='#'">Cancelar</button-->
-               </div>
+                  <button type="submit" class="button" id="btnEditarAsignatura">Editar</button>
+                </div>
             </div>
             <div class="footer">
                <div>Terminos y condiciones</div>
@@ -127,7 +126,7 @@
       </div>
    </div>
    <script type="text/javascript" src="js/main.js"></script>
-   <script type="text/javascript" src="js/admin-subject.js"></script>
+   <script type="text/javascript" src="js/admin-edit-subject.js"></script>
 </body>
 
 </html>

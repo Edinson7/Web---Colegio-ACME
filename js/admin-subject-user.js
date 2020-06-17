@@ -96,6 +96,7 @@ function regAsignacion () {
 }
 
 /*-------------------- Validaciones --------------------*/
+
 function removerHijo (hijo) {
   padre = hijo.parentNode;
   padre.removeChild(hijo);
