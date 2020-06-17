@@ -68,7 +68,7 @@
                                  </li>
                               </ul>
                            </li>
-                           <li> <a href="index.html" class="item-nav-header">Cerrar sesion</a> </li>
+                           <li> <a href="index.html" class="item-nav-header" onclick="borrarSesion()">Cerrar sesion</a> </li>
                         </ul>
                      </li>
                   </ul>
@@ -92,9 +92,10 @@
                      </div>
                   </div>
                </div>
-               <div class="second-container">
+               <div class="second-container" id="cantidadNotas" >
                   Cantidad de asignaturas matriculadas: 7
                </div>
+
                <div class="container">
                   <table class="table">
                      <caption></caption>
@@ -107,57 +108,11 @@
                            <th>Nota 3</th>
                         </tr>
                      </thead>
-                     <tbody>
+                     <tbody id='tableBodyNotas'>
                         <tr>
+                            <!--Aqui se insertan los datos desde el javascript-->
+                        </tr>
 
-                           <td class="columna-1" data-label="Asignatura">Matematicas</td>
-                           <td data-label="Codigo">103265</td>
-                           <td data-label="Nota 1">3.5</td>
-                           <td data-label="Nota 2">4.2</td>
-                           <td data-label="Nota 3">4.9</td>
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Asignatura">Español</td>
-                           <td data-label="Codigo">3205265</td>
-                           <td data-label="Nota 1">1.2</td>
-                           <td data-label="Nota 2">4.2</td>
-                           <td data-label="Nota 3">3.9</td>
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Asignatura">Programación</td>
-                           <td data-label="Codigo">1567265</td>
-                           <td data-label="Nota 1">3.3</td>
-                           <td data-label="Nota 2">1.2</td>
-                           <td data-label="Nota 3">4.9</td>
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Asignatura">Estadistica</td>
-                           <td data-label="Codigo">234265</td>
-                           <td data-label="Nota 1">3.2</td>
-                           <td data-label="Nota 2">4.2</td>
-                           <td data-label="Nota 3">4.9</td>
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Asignatura">Educación fisica</td>
-                           <td data-label="Codigo">455265</td>
-                           <td data-label="Nota 1">3.2</td>
-                           <td data-label="Nota 2">5.2</td>
-                           <td data-label="Nota 3">2.9</td>
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Asignatura">Literatura</td>
-                           <td data-label="Codigo">1034565</td>
-                           <td data-label="Nota 1">3.2</td>
-                           <td data-label="Nota 2">4.2</td>
-                           <td data-label="Nota 3">4.9</td>
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Asignatura">Algebra Lineal</td>
-                           <td data-label="Codigo">456265</td>
-                           <td data-label="Nota 1">3.2</td>
-                           <td data-label="Nota 2">4.2</td>
-                           <td data-label="Nota 3">4.9</td>
-                        </tr>
                      </tbody>
                   </table>
 
@@ -168,6 +123,8 @@
          </div>
       </div>
    </div>
+     <script type="text/javascript" src="js/main.js"></script>
+     <script type="text/javascript" src="js/estudiante-notas.js"></script>
 </body>
 
 </html>

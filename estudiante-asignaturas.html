@@ -68,7 +68,7 @@
                                  </li>
                               </ul>
                            </li>
-                           <li> <a href="index.html" class="item-nav-header">Cerrar sesion</a> </li>
+                           <li> <a href="index.html" class="item-nav-header" onclick="borrarSesion()">Cerrar sesion</a> </li>
                         </ul>
                      </li>
                   </ul>
@@ -92,7 +92,7 @@
                      </div>
                   </div>
                </div>
-               <div class="second-container">
+               <div class="second-container" id="cantidadAsignaturas">
                   Cantidad de asignaturas matriculadas: 7
                </div>
                <div class="container">
@@ -106,50 +106,11 @@
                            <th>Faltas</th>
                         </tr>
                      </thead>
-                     <tbody>
+                     <tbody id='tableBodyAsignaturas'>
                         <tr>
-                           <td class="columna-1" data-label="Materia">Matematicas</td>
-                           <td data-label="Codigo">103265</td>
-                           <td data-label="Profesor">Karen Restrepo</td>
-                           <td data-label="Faltas">0</td>
+                       <!--Aqui se insertan los datos desde el javascript-->
+                        </tr>
 
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Materia">Español</td>
-                           <td data-label="Codigo">103265</td>
-                           <td data-label="Profesor">Astrid Ordoñez</td>
-                           <td data-label="Faltas">4</td>
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Materia">Programacion</td>
-                           <td data-label="Codigo">103265</td>
-                           <td data-label="Profesor">Carlos Ardila</td>
-                           <td data-label="Faltas">3</td>
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Materia">Estadistica</td>
-                           <td data-label="Codigo">103265</td>
-                           <td data-label="Profesor">Pedro Martinez</td>
-                           <td data-label="Faltas">2</td>
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Materia">Algebra Lineal</td>
-                           <td data-label="Codigo">103265</td>
-                           <td data-label="Profesor">Sara Manzano</td>
-                           <td data-label="Faltas">0</td>
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Materia">Sociales</td>
-                           <td data-label="Codigo">103265</td>
-                           <td data-label="Profesor">Juan Agredo</td>
-                           <td data-label="Faltas">0</td>
-                        </tr>
-                        <tr>
-                           <td class="columna-1" data-label="Materia">Educacion fisica</td>
-                           <td data-label="Codigo">103265</td>
-                           <td data-label="Profesor">Maria Guerrero</td>
-                           <td data-label="Faltas">2</td>
-                        </tr>
                      </tbody>
                   </table>
 
@@ -159,6 +120,8 @@
          </div>
       </div>
    </div>
+   <script type="text/javascript" src="js/main.js"></script>
+   <script type="text/javascript" src="js/estudiante-asignaturas.js"></script>
 </body>
 
 </html>

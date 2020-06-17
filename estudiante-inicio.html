@@ -2,170 +2,172 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/menu-profile.css">
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" type="text/css" href="css/inicio-admin.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="icon" href="images/logo-acme.png" type="image/png" sizes="16x16">
-  <title>Home - Estudiante</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/menu-profile.css">
+   <link rel="stylesheet" href="css/navbar.css">
+   <link rel="stylesheet" type="text/css" href="css/inicio-admin.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="icon" href="images/logo-acme.png" type="image/png" sizes="16x16">
+   <title>Home - Estudiante</title>
 </head>
 
 <body>
-  <div class="page">
-    <div class="main-container">
-      <div class="main-left-column">
-        <div class="navbar">
-          <div class="title-navbar">
-            Escritorio
-          </div>
-          <button type="button" class="btn-navbar option-selected" onclick="window.location='estudiante-inicio.html'">
-            <img src="images/icon-home.png" class="icon-navbar" title="Inicio" />
-            Inicio
-          </button>
-          <button type="button" class="btn-navbar " onclick="window.location='estudiante-asignaturas.html'">
-            <img src="images/icon-paper.png" class="icon-navbar" title="Ver Asignaturas" />
-            Asignaturas
-          </button>
-          <button type="button" class="btn-navbar" onclick="window.location='estudiante-notas.html'">
-            <img src="images/icon-paper.png" class="icon-navbar" title="Ver Notas" />
-            Notas
-          </button>
+   <div class="page">
+      <div class="main-container">
+         <div class="main-left-column">
+            <div class="navbar">
+               <div class="title-navbar">
+                  Escritorio
+               </div>
+               <button type="button" class="btn-navbar option-selected" onclick="window.location='estudiante-inicio.html'" id="btnInicio">
+                  <img src="images/icon-home.png" class="icon-navbar" title="Inicio" />
+                  Inicio
+               </button>
+               <button type="button" class="btn-navbar "onclick="window.location='estudiante-asignaturas.html'">
+                  <img src="images/icon-paper.png" class="icon-navbar" title="Ver Asignaturas" />
+                  Asignaturas
+               </button>
+               <button type="button" class="btn-navbar" onclick="window.location='estudiante-notas.html'">
+                  <img src="images/icon-paper.png" class="icon-navbar" title="Ver Notas" />
+                  Notas
+               </button>
 
-        </div>
+            </div>
+         </div>
+         <div class="main-right-column">
+            <div class="header-container">
+               <button type="button" class="btn-search" onclick="window.location='#'">
+                  <img src="images/icon-search.png" class="icon-search" title="Buscar"></img>
+               </button>
+               <div class="search">
+                  <input list="searches" name="search" class="search-box" placeholder="Buscar..." />
+               </div>
+               <div class="separator">|</div>
+               <div class="header">
+                  <ul class="nav">
+                     <li class="nav-header">
+                        <a href="#">
+                           <div class="text-nav-header">
+                              Estudiante&nbsp;
+                              <i class="fa fa-caret-down"></i>
+                              <img src="images/img-profile.png" class="img-profile" title="imagen de perfil" />
+                           </div>
+                        </a>
+                        <ul class="options-nav-header">
+                           <li> <a href="#" class="item-nav-header">Idioma</a>
+                              <ul class="sub-options-nav-header">
+                                 <li>
+                                    <a href="#" class="sub-item-nav-header">Español</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="sub-item-nav-header">English</a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li> <a href="index.html" class="item-nav-header" onclick="borrarSesion()">Cerrar sesion</a> </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Home Adminitrador Tablero-->
+            <div class="content">
+
+               <div class="main">
+                  <header class="header-contenedor">
+                     <div class="segundo-contenedor">
+                        <div class="tercer-contenedor">
+                           <img src="images/logo-acme.png" class="img-logo" alt="Colegio ACME" title="Logo Colegio Acme">
+                        </div>
+                        <div class="cuarto-contenedor">
+                           <h1 class="titulo">COLEGIO ACME</h1>
+                        </div>
+                     </div>
+                  </header>
+                  <section class="contenido">
+                     <div class="slider">
+                        <img src="images/slider-foto1.jpg" alt="Colegio ACME" title="Slider Colegio Acme">
+                     </div>
+                     <div class="noticias not ">
+                        <div class="noticia noticia-1">
+                           <div class="noticia-foto">
+                              <img src="images/foto-colegio.jpg" alt="Colegio ACME" title="Imagen de noticia">
+                           </div>
+                           <div class="noticia-descripcion">
+                              <h2>Titulo</h2>
+                              <br>
+                              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                 Repellendus quidem ipsam eum corporis, cum temporibus vitae
+                                 odit a ut nesciunt expedita tempora molestias, ducimus nihil
+                                 excepturi. Atque sint, quasi amet.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="noticia  noticia-2">
+                           <div class="noticia-foto">
+                              <img src="images/foto-colegio-2.jpg" alt="Colegio ACME" title="Imagen de noticia">
+                           </div>
+                           <div class="noticia-descripcion">
+                              <h2>Titulo</h2>
+                              <br>
+                              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                 Repellendus quidem ipsam eum corporis, cum temporibus vitae
+                                 odit a ut nesciunt expedita tempora molestias, ducimus nihil
+                                 excepturi. Atque sint, quasi amet.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="noticia  noticia-3">
+                           <div class="noticia-foto">
+                              <img src="images/foto-colegio-3.jpg" alt="Colegio ACME" title="Imagen de noticia">
+                           </div>
+                           <div class="noticia-descripcion">
+                              <h2>Titulo</h2>
+                              <br>
+                              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                 Repellendus quidem ipsam eum corporis, cum temporibus vitae
+                                 odit a ut nesciunt expedita tempora molestias, ducimus nihil
+                                 excepturi. Atque sint, quasi amet.
+                              </p>
+                           </div>
+
+                        </div>
+                     </div>
+
+                  </section>
+                  <footer class="footer">
+                     <div class="footer-columna c-1">
+                        <h2>DIRECCIÓN</h2>
+                        <br>
+                        <p>info@Colegioacme.com</p>
+                        <p>Calle 3 con 5 </p>
+                        <p>Telefono: 3122254853</p>
+                     </div>
+                     <div class="footer-columna c-2">
+                        <h2>AYUDA</h2>
+                        <br>
+                        <p>Conoce nuestro términos y condiciones &copy;</p>
+                     </div>
+                     <div class="footer-columna c-3">
+                        <h2>REDES SOCIALES</h2>
+                        <br>
+                        <img class="redes-sociales" src="images/redes-sociales.png" alt="Redes sociales" title="Redes sociales" />
+                     </div>
+                     <div class="footer-columna c-4">
+                        <h2>TERMINOS Y CONDICIONES</h2>
+                        <br>
+                        <p>Copyright 2020 Copyright.es - All Rights Reserved &copy;</p>
+                     </div>
+                  </footer>
+               </div>
+            </div>
+         </div>
       </div>
-      <div class="main-right-column">
-        <div class="header-container">
-          <button type="button" class="btn-search" onclick="window.location='#'">
-            <img src="images/icon-search.png" class="icon-search" title="Buscar"></img>
-          </button>
-          <div class="search">
-            <input list="searches" name="search" class="search-box" placeholder="Buscar..." />
-          </div>
-          <div class="separator">|</div>
-          <div class="header">
-            <ul class="nav">
-              <li class="nav-header">
-                <a href="#">
-                  <div class="text-nav-header">
-                    Estudiante&nbsp;
-                    <i class="fa fa-caret-down"></i>
-                    <img src="images/img-profile.png" class="img-profile" title="imagen de perfil" />
-                  </div>
-                </a>
-                <ul class="options-nav-header">
-                  <li> <a href="#" class="item-nav-header">Idioma</a>
-                    <ul class="sub-options-nav-header">
-                      <li>
-                        <a href="#" class="sub-item-nav-header">Español</a>
-                      </li>
-                      <li>
-                        <a href="#" class="sub-item-nav-header">English</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li> <a href="index.html" class="item-nav-header">Cerrar sesion</a> </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Home Adminitrador Tablero-->
-        <div class="content">
-
-          <div class="main">
-            <header class="header-contenedor">
-              <div class="segundo-contenedor">
-                <div class="tercer-contenedor">
-                  <img src="images/logo-acme.png" class="img-logo" alt="Colegio ACME" title="Logo Colegio Acme">
-                </div>
-                <div class="cuarto-contenedor">
-                  <h1 class="titulo">COLEGIO ACME</h1>
-                </div>
-              </div>
-            </header>
-            <section class="contenido">
-              <div class="slider">
-                <img src="images/slider-foto1.jpg" alt="Colegio ACME" title="Slider Colegio Acme">
-              </div>
-              <div class="noticias not ">
-                <div class="noticia noticia-1">
-                  <div class="noticia-foto">
-                    <img src="images/foto-colegio.jpg" alt="Colegio ACME" title="Imagen de noticia">
-                  </div>
-                  <div class="noticia-descripcion">
-                    <h2>Titulo</h2>
-                    <br>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Repellendus quidem ipsam eum corporis, cum temporibus vitae
-                      odit a ut nesciunt expedita tempora molestias, ducimus nihil
-                      excepturi. Atque sint, quasi amet.
-                    </p>
-                  </div>
-                </div>
-                <div class="noticia  noticia-2">
-                  <div class="noticia-foto">
-                    <img src="images/foto-colegio-2.jpg" alt="Colegio ACME" title="Imagen de noticia">
-                  </div>
-                  <div class="noticia-descripcion">
-                    <h2>Titulo</h2>
-                    <br>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Repellendus quidem ipsam eum corporis, cum temporibus vitae
-                      odit a ut nesciunt expedita tempora molestias, ducimus nihil
-                      excepturi. Atque sint, quasi amet.
-                    </p>
-                  </div>
-                </div>
-                <div class="noticia  noticia-3">
-                  <div class="noticia-foto">
-                    <img src="images/foto-colegio-3.jpg" alt="Colegio ACME" title="Imagen de noticia">
-                  </div>
-                  <div class="noticia-descripcion">
-                    <h2>Titulo</h2>
-                    <br>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Repellendus quidem ipsam eum corporis, cum temporibus vitae
-                      odit a ut nesciunt expedita tempora molestias, ducimus nihil
-                      excepturi. Atque sint, quasi amet.
-                    </p>
-                  </div>
-
-                </div>
-              </div>
-
-            </section>
-            <footer class="footer">
-              <div class="footer-columna c-1">
-                <h2>DIRECCIÓN</h2>
-                <br>
-                <p>info@Colegioacme.com</p>
-                <p>Calle 3 con 5 </p>
-                <p>Telefono: 3122254853</p>
-              </div>
-              <div class="footer-columna c-2">
-                <h2>AYUDA</h2>
-                <br>
-                <p>Conoce nuestro términos y condiciones &copy;</p>
-              </div>
-              <div class="footer-columna c-3">
-                <h2>REDES SOCIALES</h2>
-                <br>
-                <img class="redes-sociales" src="images/redes-sociales.png" alt="Redes sociales" title="Redes sociales"/>
-              </div>
-              <div class="footer-columna c-4">
-                <h2>TERMINOS Y CONDICIONES</h2>
-                <br>
-                <p>Copyright 2020 Copyright.es - All Rights Reserved &copy;</p>
-              </div>
-            </footer>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+   </div>
+   <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" src="js/estudiante-inicio.js"></script>
 </body>
 
 </html>
