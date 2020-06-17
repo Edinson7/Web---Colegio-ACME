@@ -41,7 +41,9 @@ btnLogin.addEventListener('click', function() {
       for (let i = 0; i < usuarios.length; i++) {
          if (usuarios[i].user === usuarioValue && usuarios[i].password === passwordValue) {
             asignarVista(usuarios[i].tipo);
+            sesiones = addToArrayToSessionStorage(sesiones, usuarios[i], 'sesiones');
             bandera = true;
+            consultarMisAsignaturas();
          }
       }
       if (!bandera) {
