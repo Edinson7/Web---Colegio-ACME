@@ -144,6 +144,10 @@
   color: red;
 }
 
+.msgLoad {
+  margin-bottom: 30px;
+}
+
 .field small, .select-container small, .msgLoad {
    color: #e74c3c;
    bottom: 0;
@@ -161,6 +165,7 @@
 }
 
 .msgLoadVisible {
+  margin-bottom: 30px;
   width: 65%;
   color: #e74c3c;
 }
