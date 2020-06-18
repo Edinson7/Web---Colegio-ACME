@@ -9,7 +9,10 @@
    <link rel="stylesheet" href="css/navbar.css">
    <link rel="stylesheet" href="css/main.css">
    <link rel="stylesheet" href="css/profesor-tabla.css">
+   <link rel="stylesheet" href="css/ventanaEmergente.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
    <link rel="icon" href="images/logo-acme.png" type="image/png" sizes="16x16">
 
    <title>Estudiantes -Notas</title>
@@ -63,7 +66,7 @@
                                  </li>
                               </ul>
                            </li>
-                           <li> <a href="index.html" class="item-nav-header"onclick="borrarSesion()">Cerrar sesion</a> </li>
+                           <li> <a href="index.html" class="item-nav-header" onclick="borrarSesion()">Cerrar sesion</a> </li>
                         </ul>
                      </li>
                   </ul>
@@ -108,80 +111,51 @@
                            <th>Nota 1</th>
                            <th>Nota 2</th>
                            <th>Nota 3</th>
+                           <th>Opciones</th>
                         </tr>
                      </thead>
-                     <tbody>
-                        <tr>
-                           <td class="estudiante" data-label="Estudiante">Carlos Huila</td>
-                           <td data-label="Identificacion">103265</td>
-                           <td data-label="Faltas"><input type="text" name="faltas" value=""></td>
-                           <td data-label="Nota 1"><input type="text" name="nota-1" value=""></td>
-                           <td data-label="Nota 2"><input type="text" name="nota-2" value=""></td>
-                           <td data-label="Nota 3"><input type="text" name="nota-3" value=""></td>
-                        </tr>
-                        <tr>
-                           <td class="estudiante" data-label="Estudiante">Maria Cano</td>
-                           <td data-label="Identificacion">3205265</td>
-                           <td data-label="Faltas"><input type="text" name="faltas" value=""></td>
-                           <td data-label="Nota 1"><input type="text" name="nota-1" value=""></td>
-                           <td data-label="Nota 2"><input type="text" name="nota-2" value=""></td>
-                           <td data-label="Nota 3"><input type="text" name="nota-3" value=""></td>
-                        </tr>
-                        <tr>
-                           <td class="estudiante" data-label="Estudiante">Astrid Ordoñez</td>
-                           <td data-label="Identificacion">1567265</td>
-                           <td data-label="Faltas"><input type="text" name="faltas" value=""></td>
-                           <td data-label="Nota 1"><input type="text" name="nota-1" value=""></td>
-                           <td data-label="Nota 2"><input type="text" name="nota-2" value=""></td>
-                           <td data-label="Nota 3"><input type="text" name="nota-3" value=""></td>
-                        </tr>
-                        <tr>
-                           <td class="estudiante" data-label="Estudiante">Karen Rrestrepo</td>
-                           <td data-label="Identificacion">234265</td>
-                           <td data-label="Faltas"><input type="text" name="faltas" value=""></td>
-                           <td data-label="Nota 1"><input type="text" name="nota-1" value=""></td>
-                           <td data-label="Nota 2"><input type="text" name="nota-2" value=""></td>
-                           <td data-label="Nota 3"><input type="text" name="nota-3" value=""></td>
-                        </tr>
-                        <tr>
-                           <td class="estudiante" data-label="Estudiante">Marcela Agudelo</td>
-                           <td data-label="Identificacion">455265</td>
-                           <td data-label="Faltas"><input type="text" name="faltas" value=""></td>
-                           <td data-label="Nota 1"><input type="text" name="nota-1" value=""></td>
-                           <td data-label="Nota 2"><input type="text" name="nota-2" value=""></td>
-                           <td data-label="Nota 3"><input type="text" name="nota-3" value=""></td>
-                        <tr>
-                           <td class="estudiante" data-label="Estudiante">Carlos Ardila</td>
-                           <td data-label="Identificacion">1034565</td>
-                           <td data-label="Faltas"><input type="text" name="faltas" value=""></td>
-                           <td data-label="Nota 1"><input type="text" name="nota-1" value=""></td>
-                           <td data-label="Nota 2"><input type="text" name="nota-2" value=""></td>
-                           <td data-label="Nota 3"><input type="text" name="nota-3" value=""></td>
-                        </tr>
-                        <tr>
-                           <td class="estudiante" data-label="Estudiante">Valentina Valencia</td>
-                           <td data-label="Identificacion">456265</td>
-                           <td data-label="Faltas"><input type="text" name="faltas" value=""></td>
-                           <td data-label="Nota 1"><input type="text" name="nota-1" value=""></td>
-                           <td data-label="Nota 2"><input type="text" name="nota-2" value=""></td>
-                           <td data-label="Nota 3"><input type="text" name="nota-3" value=""></td>
-                        </tr>
+                     <tbody id="tblBodyNotas">
+                        <!--Aqui se insertan los datos desde el javascript-->
                      </tbody>
                   </table>
-                  <div class="button-container">
-                     <!--button type="button" class="button" onclick="window.location='#'">Iniciar sesion</button-->
-                     <button type="button" class="button" onclick="window.location='profesor-courses-list.html'">Guardar</button>
+                  <div class="overlay" id="overlay">
+                     <div class="popup" id="popup">
+                        <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                        <h4>EDITAR NOTA</h4>
+                        <br>
+                        <form action="">
+                           <div class="contenedor-inputs">
+                              <div class="field">
+                                 <label class="lbl-form">Faltas</label>
+                                 <input class="text-box" type="text" id="txtFaltas">
+                              </div>
+                              <div class="field">
+                                 <label class="lbl-form">Nota 1</label>
+                                 <input class="text-box" type="text" id="txtNota1">
+                              </div>
+                              <div class="field">
+                                 <label class="lbl-form">Nota 2</label>
+                                 <input class="text-box" type="text" id="txtNota2">
+                              </div>
+                              <div class="field">
+                                 <label class="lbl-form">Nota 3</label>
+                                 <input class="text-box" type="text" id="txtNota3">
+                              </div>
+                           </div>
+                           <input type="submit" class="btn-submit" value="Guardar">
+                        </form>
+                     </div>
                   </div>
-
-
                </div>
-
-
             </div>
+
+
          </div>
       </div>
    </div>
-     <script type="text/javascript" src="js/main.js"></script>
+   </div>
+   <script type="text/javascript" src="js/main.js"></script>
+   <script type="text/javascript" src="js/profesor-notas.js"></script>
 </body>
 
 </html>

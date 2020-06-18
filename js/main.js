@@ -1,8 +1,10 @@
 var usuarios = localStorage.getItem('usuarios') ? JSON.parse(localStorage.getItem('usuarios')) : addToArrayToLocalStorage([], { user: 'admin', password: '123', tipo: 'administrador' }, 'usuarios');
 var asignaturas = localStorage.getItem('asignaturas') ? JSON.parse(localStorage.getItem('asignaturas')) : [];
 var estudianteAsignatura = localStorage.getItem('estudianteAsignatura') ? JSON.parse(localStorage.getItem('estudianteAsignatura')) : [];
+
 var sesiones = sessionStorage.getItem('sesiones') ? JSON.parse(sessionStorage.getItem('sesiones')) : [];
 var misAsignaturas = sessionStorage.getItem('misAsignaturas') ? JSON.parse(sessionStorage.getItem('misAsignaturas')) : [];
+var profesorEstudiante = sessionStorage.getItem('profesorEstudiante') ? JSON.parse(sessionStorage.getItem('profesorEstudiante')) : [];
 
 function addToArrayToLocalStorage (array, item, keyName) {
   array.push(item);
@@ -17,7 +19,6 @@ function addToArrayToSessionStorage(array, item, keyName) {
 }
 
 function borrarSesion() {
-   console.log('entrooooo');
    sessionStorage.clear();
 }
 
