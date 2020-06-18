@@ -9,29 +9,68 @@ const txtPass = document.getElementById('txtPass');
 const txtConfirmPass = document.getElementById('txtConfirmPass');
 const btnPhoto = document.getElementById('btnPhoto');
 const msgLoad = document.getElementById('msgLoad');
-const btnRegUser = document.getElementById('btnRegUser');
+const btnEditUser = document.getElementById('btnEditUser');
 var consultarValidacion = false;
 validacion = false;
 var fotoCargada = '';
+var tipoInicial = '';
+var posEdit;
 
-/*-------------------- Registro del nuevo usuario --------------------*/
+/*-------------------- Carga de datos --------------------*/
 
-function crearUsuario (pName, pLastName, pId, pTipo, pUser, pEmail, pPassword) {
-  let usuario = {
-    nombre: pName,
-    apellido: pLastName,
-    id: pId,
-    tipo: pTipo,
-    user: pUser,
-    email: pEmail,
-    password: pPassword,
-    foto: fotoCargada
-    //asignaturas: []
+txtId.disabled = true;
+if ( sessionStorage.getItem('idUserEdit') ) {
+  let idForEdit = JSON.parse( sessionStorage.getItem('idUserEdit') );
+  for (let i = 1; i < usuarios.length; i++) {
+    if (usuarios[i].id == idForEdit) {
+      txtName.value = usuarios[i].nombre;
+      txtLastName.value = usuarios[i].apellido;
+      txtId.value = usuarios[i].id;
+
+      for (var j = 0; j < slcTypeUser.length; j++) {
+        if ( usuarios[i].tipo === slcTypeUser.options[j].text ) {
+          slcTypeUser.selectedIndex = j;
+          tipoInicial = usuarios[i].tipo;
+          break;
+        }
+      }
+      txtUser.value = usuarios[i].user;
+      txtEmail.value = usuarios[i].email;
+      txtPass.value = usuarios[i].password;
+
+      let newImgTag = document.createElement('img');
+      newImgTag.className = 'img-photo';
+      fotoCargada = usuarios[i].foto;
+      newImgTag.src = fotoCargada;
+      padre = btnPhoto.parentNode;
+      padre.appendChild(newImgTag);
+
+      posEdit = i;
+      break;
+    }
   }
-  return usuario;
+}
+else {
+  window.location = 'admin-user-list.html';
 }
 
-function RegistrarUsuario() {
+/*-------------------- Edicion de usuario --------------------*/
+
+function cambioTipoUsuario (newTipo, id) {
+  if (newTipo === 'Estudiante') {
+    for (var i = 0; i < asignaturas.length; i++) {
+      if (asignaturas[i].profesor === id) {
+        asignaturas[i].profesor = null;
+      }
+    }
+    localStorage.setItem( 'asignaturas', JSON.stringify(asignaturas) );
+  } else {
+    estudianteAsignatura = deleteForId (id, estudianteAsignatura);
+    localStorage.setItem( 'estudianteAsignatura', JSON.stringify(estudianteAsignatura) );
+  }
+}
+
+function EditarUsuario() {
   let name = txtName.value.trim();
   let lastName = txtLastName.value.trim();
   let id = txtId.value.trim();
@@ -40,14 +79,30 @@ function RegistrarUsuario() {
   let email = txtEmail.value.trim();
   let password = txtPass.value.trim();
 
-  let nuevoUsuario = crearUsuario (name, lastName, id, tipo, user, email, password);
-  addToArrayToLocalStorage(usuarios, nuevoUsuario, 'usuarios');
+  usuarios[posEdit].nombre = name;
+  usuarios[posEdit].apellido = lastName;
+  usuarios[posEdit].id = id;
+  usuarios[posEdit].tipo = tipo;
+  usuarios[posEdit].user = user;
+  usuarios[posEdit].email = email;
+  usuarios[posEdit].password = password;
+  usuarios[posEdit].foto = fotoCargada;
 
-  alert("¡El " + tipo + ": " + name + " " + lastName + ", con el Nº identificacion: " + id + ", usuario: " + user + " y email: " + email + ", ha sido registrado con exito!");
-  location.reload();
+  if (usuarios[posEdit].tipo !== tipoInicial) {
+    cambioTipoUsuario (usuarios[posEdit].tipo, usuarios[posEdit].id);
+  }
+
+  localStorage.setItem( 'usuarios', JSON.stringify(usuarios) );
+
+  alert("¡El usuario ha sido editado con exito!\nNombre: " + usuarios[posEdit].nombre + " --- Apellido: " + usuarios[posEdit].apellido
+  + " --- Identificacion: " + usuarios[posEdit].id + " --- Tipo: " + usuarios[posEdit].tipo + " --- Usuario: " + usuarios[posEdit].user
+  + " --- Correo: " + usuarios[posEdit].email);
+
+  sessionStorage.clear();
 }
 
 /*-------------------- Validacion de campos --------------------*/
+
 function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
@@ -80,7 +135,6 @@ function secondValidateTextField (condicion1, campo, mensaje1, condicion2, mensa
 function checkInputs () {
   let txtNameValue = txtName.value.trim();
   let txtLastNameValue = txtLastName.value.trim();
-  let txtIdValue = txtId.value.trim();
   let txtUserValue = txtUser.value.trim();
   let txtEmailValue = txtEmail.value.trim();
   let txtPassValue = txtPass.value.trim();
@@ -89,7 +143,6 @@ function checkInputs () {
 
   firstValidateTextField ( txtNameValue === '', txtName, 'No se puede dejar el(los) Nombre(s) en blanco.');
   firstValidateTextField ( txtLastNameValue === '', txtLastName, 'No se puede dejar el(los) Apellido(s) en blanco.');
-  secondValidateTextField ( txtIdValue === '', txtId, 'No se puede dejar la Identificacion en blanco.', isNaN(txtIdValue), 'La Identificacion debe ser numerica.');
   firstValidateTextField ( txtUserValue === '', txtUser, 'No se puede dejar el Usuario en blanco.');
   firstValidateTextField ( !( isEmail(txtEmailValue) ), txtEmail, 'El Correo debe tener un formato valido.');
   firstValidateTextField ( txtPassValue === '', txtPass, 'No se puede dejar la Contraseña en blanco.');
@@ -110,10 +163,14 @@ form.addEventListener('input', e => {
   if (consultarValidacion) { checkInputs(); }
 });
 
-btnRegUser.addEventListener('click', e => {
+btnEditUser.addEventListener('click', e => {
   e.preventDefault();
   consultarValidacion = true;
-  if (checkInputs() && fotoCargada != '') { RegistrarUsuario(); }
+  if (checkInputs() && fotoCargada != '')
+  {
+    EditarUsuario();
+    window.location = 'admin-user-list.html';
+  }
 });
 
 btnPhoto.addEventListener('click', e => {
