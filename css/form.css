@@ -139,30 +139,35 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-.msgLoad-first-container {
-  width: 65%;
-  margin-bottom: 30px;
-}
-
 .msgAsignar {
   width: 65%;
   color: red;
 }
 
-.field small, .select-container small, .msgLoad-second-container small {
+.msgLoad {
+  margin-bottom: 30px;
+}
+
+.field small, .select-container small, .msgLoad {
    color: #e74c3c;
    bottom: 0;
    left: 0;
    visibility: hidden;
 }
 
-.field-mensaje {
+.field-mensaje  {
    display: none;
    color: #e74c3c;
 }
 
-.field.error small {
+.field.error small, .msgLoadVisible {
    visibility: visible;
+}
+
+.msgLoadVisible {
+  margin-bottom: 30px;
+  width: 65%;
+  color: #e74c3c;
 }
 
 .field.error input {
@@ -175,6 +180,6 @@
 
 .img-photo {
   margin-top: 5px;
-  width: 40px;
+  width: 39px;
   height: auto;
 }

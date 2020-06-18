@@ -22,6 +22,18 @@ function borrarSesion() {
    sessionStorage.clear();
 }
 
+function deleteForId (pId, array) {
+  let i = 0;
+  while (i < array.length) {
+    if (array[i].id === pId) {
+      array.splice(i, 1);
+    } else {
+      i++;
+    }
+  }
+  return array;
+}
+
 function crearElemDoc (tipo, className, text, padre) {
   newElem = document.createElement(tipo);
   newElem.className = className;
