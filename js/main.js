@@ -4,7 +4,6 @@ var estudianteAsignatura = localStorage.getItem('estudianteAsignatura') ? JSON.p
 
 var sesiones = sessionStorage.getItem('sesiones') ? JSON.parse(sessionStorage.getItem('sesiones')) : [];
 var misAsignaturas = sessionStorage.getItem('misAsignaturas') ? JSON.parse(sessionStorage.getItem('misAsignaturas')) : [];
-var profesorEstudiante = sessionStorage.getItem('profesorEstudiante') ? JSON.parse(sessionStorage.getItem('profesorEstudiante')) : [];
 
 function addToArrayToLocalStorage (array, item, keyName) {
   array.push(item);
